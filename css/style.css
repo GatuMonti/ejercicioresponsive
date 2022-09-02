@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
@@ -8,7 +9,7 @@ body{
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     width: 100vw;
-    height: auto;
+    height: auto;    
 }
 
 /*-------HEADER------------
@@ -17,24 +18,23 @@ body{
 .top{
     display: flex;
     flex-direction: column;
-    justify-content:left;    
+    justify-content:flex-start;   
+    width: 100vw;
+    height: auto;     
 }
 .top p{
     background-color: #D1891C;
     font-size: 0.75rem;  
     margin: 0px;
     padding: 0.1rem 0 0.1rem 2rem;
-    margin: 0px;    
 }
 
 h1{
-    display: inline-block;
     background-color: #00669F;
     font-size: 1.5rem;
     color: white;
     font-weight: 300;
-    padding: 1rem 2rem;
-    margin: 0px;
+    padding: 1rem 0rem 1rem 2rem;
     box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.25);
 }
 
@@ -44,35 +44,35 @@ h1{
 
 .principal{
     display:flex;
-    flex-direction: column;    
+    flex-direction: column;   
     align-items: center;
-    padding-top: 3%;
-    background-color: #E5E5E5;
-}
-.box {
-    display:flex;
-    flex-direction: column; 
-    align-content: center;
-    justify-content: center;
-    width: 60%;    
-    background-color: #F3F3F3;
-    border-radius: 5% 5% 0% 0%;
-    
-}
-.fondo1{
-    display: flex;
-    justify-content: ;
-    
-}
-.fondo1 img{
-    box-shadow: 0 0.4rem 0.1rem rgba(0, 0, 0, 0.25);
-    border-radius: 5% 5% 0% 0%;
+    padding-top: 1rem;
     width: 100%;
     height: auto;
 }
 
-i{  
-    
+.box {
+    display:flex;
+    flex-direction: column; 
+    align-content: center;
+    height: auto;
+    width: 60%; 
+    background-color: #F3F3F3;
+    border-radius: 5% 5% 0% 0%;
+    margin-bottom: 4rem;
+    box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.25);
+}
+.fondo1{
+    display: flex;   
+    width: 100%;
+}
+.fondo1 img{
+    box-shadow: 0 0.4rem 0.1rem rgba(0, 0, 0, 0.25);
+    border-radius: 10% 10% 0% 0%;
+    width: 100%;    
+}
+
+i{      
     margin-top: 10%;
     margin-left: -90%;
     color: red;  
@@ -84,7 +84,6 @@ i{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: auto;
 }
 
 .perfil{
@@ -99,11 +98,91 @@ h2{
     font-weight: 400;
 }
 .box p{
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin: 5% 5%;
+}
+
+.boton{
+    width: 50%;
+    padding: 0.75rem;
+    margin: 0.5rem 0rem 2rem; 
+    background-color: #00669F;
+    border-radius: 5%;
+    border: none;
+    min-width: 100px;
+    
+}
+
+.boton a{
+    text-decoration: none;
+    color:white;
 }
 
 
 
+/* --------- FOOTER ---------------
+##################################*/
+
+.bot{
+    background-color: #00669F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 1rem 1rem;
+}
+
+.git{
+    width: 20%;
+    margin: 0.5rem;    
+}
+
+.bot p{
+    color:white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+
+/*-----------MEDIA QUERIS ---------
+#################################*/
+
+
+@media (min-width:500px){
+    .principal{
+        flex-direction: row;  
+        flex-wrap: wrap; 
+        justify-content: center;
+        padding-left: 4rem;
+        padding-right: 10rem;
+        
+        
+    }
+    
+    .box {
+        width: 70%;
+        max-width: 350px; 
+        height: auto;
+        margin: 0rem 4rem 3rem;
+        
+    }
+    .bot{
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .bot p{
+        flex: 10%;
+        text-align: center;
+        margin-left:15%;
+        font-size: 1.25rem;
+        
+    }
+    .git{
+        align-self: flex-end;  
+    }
+}
 
 
